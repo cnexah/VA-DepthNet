@@ -34,4 +34,4 @@ python vadepthnet/eval.py configs/arguments_eval_kittieigen.txt
 ## Acknowledgements
 Thanks to Jin Han Lee for opening source of the excellent work [BTS](https://github.com/cleinc/bts).
 Thanks to Microsoft Research Asia for opening source of the excellent work [Swin Transformer](https://github.com/microsoft/Swin-Transformer).
-Thanks to Alibaba for opening source of the excellent work [NeWCRFs](https://github.com/aliyun/NeWCRFs)).
+Thanks to Alibaba for opening source of the excellent work [NeWCRFs](https://github.com/aliyun/NeWCRFs).
