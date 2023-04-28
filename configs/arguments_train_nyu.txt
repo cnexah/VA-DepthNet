@@ -1,0 +1,32 @@
+--mode train
+--model_name vadepthnet
+--pretrain /cluster/work/cvl/guosun/cr/swin_large_patch4_window12_384_22k.pth
+--dataset nyu
+--data_path ../dataset/nyu_depth_v2/sync/
+--gt_path ../dataset/nyu_depth_v2/sync/
+--filenames_file data_splits/nyudepthv2_train_files_with_gt.txt
+--batch_size 4
+--num_epochs 50
+--learning_rate 3e-5
+--end_learning_rate 1e-5
+--weight_decay 0.0
+--adam_eps 1e-3
+--num_threads 1
+--input_height 480
+--input_width 640
+--max_depth 10
+--do_random_rotate
+--degree 2.5
+--log_directory ./models/
+--multiprocessing_distributed
+--dist_url tcp://127.0.0.1:2305
+
+--log_freq 100
+--do_online_eval
+--eval_freq 2500
+--data_path_eval ../dataset/nyu_depth_v2/official_splits/test/
+--gt_path_eval ../dataset/nyu_depth_v2/official_splits/test/
+--filenames_file_eval data_splits/nyudepthv2_test_files_with_gt.txt
+--min_depth_eval 1e-3
+--max_depth_eval 10
+--eigen_crop
